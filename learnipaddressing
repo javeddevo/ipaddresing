@@ -1,0 +1,59 @@
+ip:internet protocol ip address are two types:
+1.physical addressing (48 bit mac address) ex:shoesshop
+2.logical addressing(5-63-66,hyderabd,charminar,shoeshop)can be known by the network with the logical address
+There are two types of ips ---ipv4 nad ipv6 
+---ipv4-publicip and private ip 
+#ipv4 it consist of 4 octate: ip is combination of network id and host id ex:123.22.4.33[0-255]
+-------------------------------------------------------------
+Theree are classes in ip
+class-A: 1.0.0.0 to 126.0.0.0(big network)
+class-B: 128.0.0.0 to 191.255.0.0(127.0.0.0 reserved  for loop back addresss ex:ping or not ping to check the connection)
+class-C: 192.0.0.0 to 223.225.255.0
+Calss-D: 224-239(multitasking)
+class-E: 240-255(useful for research)
+
+----------------------------------------------------------------------------------------------------
+check the ip belong to which class?
+123.3.4.5---class A
+199.8.4.5--class B
+
+===============================================================
+How to find out the network id:?network id is 1 byte and host id i 0 byte
+it depends on the class
+ex:class A -networkid.host.host.host(122.2.2.2)
+network id is:122.0.0.0
+classB:N.N.H.H(199.2.22.2)----NT-ID is 199.2.00)
+Class C:N.N.N.H
+----------------------------------------------------------------------------------------------------------------
+subnet mask depend upon the class
+121.0.23.3---11111111.0000000.00000000.00000000.(convert to decimal)=225
+class A:255.0.0.0
+class B:255.255.0.0
+===========================================================================
+how to convert ip to binary?
+192.168.37.200
+decimal form = 2^7 2^6 2^5 2^4 2^3 2^2  2^1 2^0=225 for 8 bits
+               128  64 32 16     8  4    2    1
+if ip address is 192.168.37.200
+for ist octate total 192:128+64=192-----11000000
+for 2nd octate total 168:128+32+8-------10101000
+.....
+.....
+-------------------------------------------------------------
+how to find broadcast id and usable id?
+usable host is how many ips can be allocated within the given ip
+bradcast ip is sending for group content
+150.22.222.2
+find calss:calss B
+bradcast ip--give the max ip in host id==150.22.255.255
+usable host --find class and by  host id:2^16-2(-2 for ignoring network id and broadcast id)
+usable host for ip:11:22:22:22---2^24-2(thats why calss a is big network)
+
+
+
+
+
+
+
+
+
